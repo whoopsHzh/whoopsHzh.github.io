@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="行走在路上的黄鸡鸡">
 <meta property="og:description" content="mpvue-entry为什么要用mpvue-entry，因为两点 mpvue 的大坑 mpvue新增页面或者模块的时候必须重新npm run dev才可以进行更新，有时候你run了还没有用，要删除dist再跑服务才有用，这个坑目测摸小程序的都会遇到，而且还不支持热更新  mpvue所有页面模块.vue文件都需要写main.js导入vue，重复工作不说   mpvue-entry用途 热跟新爽，一直">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-14T15:04:07.425Z">
+<meta property="og:updated_time" content="2018-06-14T15:03:43.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mpvue-entry使用指南(坑)">
 <meta name="twitter:description" content="mpvue-entry为什么要用mpvue-entry，因为两点 mpvue 的大坑 mpvue新增页面或者模块的时候必须重新npm run dev才可以进行更新，有时候你run了还没有用，要删除dist再跑服务才有用，这个坑目测摸小程序的都会遇到，而且还不支持热更新  mpvue所有页面模块.vue文件都需要写main.js导入vue，重复工作不说   mpvue-entry用途 热跟新爽，一直">
@@ -367,24 +367,12 @@
                 
               
 
-              <time title="Erstellt: 2018-06-14 22:51:56" itemprop="dateCreated datePublished" datetime="2018-06-14T22:51:56+08:00">2018-06-14</time>
+              <time title="Erstellt: 2018-06-14 22:51:56 / Geändert am: 23:03:43" itemprop="dateCreated datePublished" datetime="2018-06-14T22:51:56+08:00">2018-06-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-06-14 23:04:07" itemprop="dateModified" datetime="2019-06-14T23:04:07+08:00">2019-06-14</time>
               
             
           </span>
@@ -440,7 +428,7 @@
 <h3 id="在webpack-base-conf-js中进行配置"><a href="#在webpack-base-conf-js中进行配置" class="headerlink" title="在webpack.base.conf.js中进行配置"></a>在<code>webpack.base.conf.js</code>中进行配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MpvueEntry = <span class="built_in">require</span>(<span class="string">'mpvue-entry'</span>)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: MpvueEntry.getEntry(<span class="string">'src/pages.js'</span>),</span><br><span class="line">  ...</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> MpvueEntry(),</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">---------------------</span><br></pre></td></tr></table></figure>
 <h3 id="在page目录下新增page-js"><a href="#在page目录下新增page-js" class="headerlink" title="在page目录下新增page.js"></a>在<code>page</code>目录下新增<code>page.js</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// pages.js</span><br><span class="line">module.exports = [</span><br><span class="line">  &#123;</span><br><span class="line">    path: &apos;pages/news/list&apos;, // 页面路径，同时是 vue 文件相对于 src 的路径，必填</span><br><span class="line">    config: &#123; // 页面配置，即 page.json 的内容，可选</span><br><span class="line">      navigationBarTitleText: &apos;文章列表&apos;,</span><br><span class="line">      enablePullDownRefresh: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <h3 id="最后注意的一波"><a href="#最后注意的一波" class="headerlink" title="最后注意的一波"></a>最后注意的一波</h3><p>这里有个很迷的坑，pages目录下面会有main.js文件删掉，app.json中要是出现”pagePath”: “pages/my/main”,这种写法，也需要改成pagePath”: “pages/my”</p>
-<h3 id="over"><a href="#over" class="headerlink" title="over~~~~"></a>over~~~~</h3>
+<h3 id="over"><a href="#over" class="headerlink" title="over~~~"></a>over<del>~</del>~~</h3>
       
     </div>
 
@@ -679,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mpvue-entry"><span class="nav-number">1.</span> <span class="nav-text">mpvue-entry</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mpvue-的大坑"><span class="nav-number">1.0.1.</span> <span class="nav-text">mpvue 的大坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mpvue-entry用途"><span class="nav-number">1.0.2.</span> <span class="nav-text">mpvue-entry用途</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档"><span class="nav-number">1.1.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在webpack-base-conf-js中进行配置"><span class="nav-number">1.3.</span> <span class="nav-text">在webpack.base.conf.js中进行配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在page目录下新增page-js"><span class="nav-number">1.4.</span> <span class="nav-text">在page目录下新增page.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后注意的一波"><span class="nav-number">1.5.</span> <span class="nav-text">最后注意的一波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#over"><span class="nav-number">1.6.</span> <span class="nav-text">over~~~~</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mpvue-entry"><span class="nav-number">1.</span> <span class="nav-text">mpvue-entry</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mpvue-的大坑"><span class="nav-number">1.0.1.</span> <span class="nav-text">mpvue 的大坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mpvue-entry用途"><span class="nav-number">1.0.2.</span> <span class="nav-text">mpvue-entry用途</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档"><span class="nav-number">1.1.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在webpack-base-conf-js中进行配置"><span class="nav-number">1.3.</span> <span class="nav-text">在webpack.base.conf.js中进行配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在page目录下新增page-js"><span class="nav-number">1.4.</span> <span class="nav-text">在page目录下新增page.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后注意的一波"><span class="nav-number">1.5.</span> <span class="nav-text">最后注意的一波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#over"><span class="nav-number">1.6.</span> <span class="nav-text">over~~~</span></a></li></ol></div>
             
 
           </div>
@@ -700,7 +688,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
